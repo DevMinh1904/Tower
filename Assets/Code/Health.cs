@@ -22,4 +22,21 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Heal(int amount)
+    {
+        if (!isDestroyed)
+        {
+            hitPoints += amount;
+        }
+    }
+
+    public int GetHitPoints()
+    {
+        return hitPoints;
+    }
+
+    public bool IsDestroyed()
+    {
+        return isDestroyed;
+    }
 }
